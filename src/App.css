@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.pages {
+  padding: 2rem 5rem;
+}
+
+h1 {
+  color: #666;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 1rem;
+}
