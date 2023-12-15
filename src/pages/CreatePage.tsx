@@ -7,6 +7,7 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert, { AlertProps, AlertColor } from "@mui/material/Alert";
+import { useNavigate } from "react-router-dom";
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
   props,
@@ -26,7 +27,10 @@ const CreatePage = () => {
   const [title, setTitle] = useState<string>("");
   const [body, setBody] = useState<string>("");
 
-  const mutate = useAddPost();
+  const navigate = useNavigate();
+  const redirectToHomePage = () => navigate("/");
+
+  const mutate = useAddPost(redirectToHomePage);
 
   const handleAddPost = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();

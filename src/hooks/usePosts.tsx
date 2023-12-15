@@ -56,10 +56,10 @@ export const useGetPost = (postId: string) => {
   });
 };
 
-export const useAddPost = () => {
+export const useAddPost = (redirect: () => void) => {
   const { mutate } = useMutation({
     mutationFn: addPost,
-    onSuccess: () => (window.location.href = "/"),
+    onSuccess: redirect,
   });
 
   return mutate;
@@ -74,10 +74,10 @@ export const useUpdatePost = () => {
   return mutate;
 };
 
-export const useDeletePost = () => {
+export const useDeletePost = (redirect: () => void) => {
   const { mutate } = useMutation({
     mutationFn: deletePost,
-    onSuccess: () => (window.location.href = "/"),
+    onSuccess: redirect,
   });
 
   return mutate;

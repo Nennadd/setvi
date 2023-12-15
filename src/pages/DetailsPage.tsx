@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useGetPost, useUpdatePost, useDeletePost } from "../hooks/usePosts";
 import ButtonAppBar from "../components/Navbar";
 import Box from "@mui/material/Box";
@@ -33,8 +33,11 @@ const DetailsPage = () => {
   const [title, setTitle] = useState<string>("");
   const [body, setBody] = useState<string>("");
 
+  const navigate = useNavigate();
+  const redirectToHomePage = () => navigate("/");
+
   const updateMutation = useUpdatePost();
-  const deleteMutation = useDeletePost();
+  const deleteMutation = useDeletePost(redirectToHomePage);
 
   const handleUpdatePost = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
