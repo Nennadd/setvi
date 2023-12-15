@@ -1,3 +1,7 @@
+iframe#webpack-dev-server-client-overlay {
+  display: none !important;
+}
+
 .App {
   text-align: center;
 }
@@ -40,6 +44,14 @@
 .pages {
   padding: 2rem 5rem;
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 30%;
+  margin: 3rem auto;
+  padding: 1rem;
+}
 
 h1 {
   color: #666;
@@ -49,4 +61,22 @@ h1 {
   text-decoration: none;
   color: #fff;
   margin-left: 1rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .wrapper {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 90%;
+  }
 }

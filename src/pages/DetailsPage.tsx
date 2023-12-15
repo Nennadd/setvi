@@ -86,16 +86,8 @@ const DetailsPage = () => {
   return (
     <>
       <ButtonAppBar />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "2rem",
-          width: "30%",
-          margin: "0 auto",
-        }}
-      >
-        <h1>Details</h1>
+      <h1>Details</h1>
+      <div className="wrapper">
         <div>
           <img
             style={{ maxWidth: "100%", height: "15rem" }}

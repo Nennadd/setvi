@@ -63,16 +63,7 @@ const CreatePage = () => {
     <>
       <ButtonAppBar />
       <h1 style={{ marginTop: "5rem" }}>Add New Post</h1>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "2rem",
-          width: "30%",
-          margin: "3rem auto",
-          padding: "1rem",
-        }}
-      >
+      <div className="wrapper">
         <Box
           component="form"
           sx={{

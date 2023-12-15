@@ -5,6 +5,10 @@ import "./App.css";
 
 const queryClient = new QueryClient();
 
+// ************************************************************************************************************
+//   Moze jos mnogo bolje, nego nisam imao dovoljno vremena :)  !!!
+// ************************************************************************************************************
+
 function App() {
   return (
     <div className="App">

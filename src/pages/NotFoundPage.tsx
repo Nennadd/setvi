@@ -4,7 +4,7 @@ const NotFoundPage = () => {
   return (
     <>
       <ButtonAppBar />
-      <div style={{ width: "40%", margin: "3rem auto" }}>
+      <div className="wrapper">
         <h1>Page Not Found</h1>
         <div>
           <img
